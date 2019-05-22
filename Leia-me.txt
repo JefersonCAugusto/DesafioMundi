@@ -1,0 +1,5 @@
+O projeto divide-se em uma parte Programada em C voltado para microcontroladores pic e a outra parte uma aplicação em C# consumindo recursos da API da Mundi e armazenando no banco.
+O processo inicia-se com o microcontrolador que utiliza protocolo SPI para ler os dados no módulo RFID. Essas Tags são previamente cadastrados no e associadas a um usuário (customer).
+Ao passar uma TAG a aplicação le o valor recebido pela serial emulada na porta COM4, procura no banco pelo ID(customer) responsavel daquela Tag, faz uma consulta da API da Mundi a procurado nome,  e-mail e salva essas informações no banco. 
+Caso a flag de venda esteja habilitado é possivel realizar uma venda, mas para isso será necessario informar o valor a ser pago e o ID_do_cartão (que deve ser obtido atravez do Postman). 
+Ao final dessa transação, caso seja aprovado será retornado um ID da transação.
